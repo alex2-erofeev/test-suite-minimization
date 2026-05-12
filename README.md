@@ -230,7 +230,7 @@ mvn org.codehaus.mojo:exec-maven-plugin:3.6.1:java "-Dexec.classpathScope=test" 
 Результаты в `target/minimizer/<algorithmDir>/heuristic-summary.txt`:
 
 ```
-# В Excel записываем:
+# Для доверительных интервалов фиксируются:
 # t   = Heuristic solve ms       (время работы алгоритма)
 # CPU = Peak CPU %               (пиковая нагрузка процессора)
 # RAM = Peak RAM MB (heap used)  (пиковое использование кучи)
