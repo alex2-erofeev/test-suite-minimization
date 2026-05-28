@@ -114,6 +114,7 @@ public final class MinimizerPipelineMain {
                 case NAIVE:
                 case GREEDY_ESSENTIAL:
                 case GENETIC:
+                case GENETIC_JENETICS:
                     minimizeWithHeuristic(options, matrix, matrixMillis, resourceSampler);
                     return;
                 default:

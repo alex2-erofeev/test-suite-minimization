@@ -39,12 +39,18 @@ final class PipelinePaths {
         return root.resolve("genetic");
     }
 
+    Path geneticJeneticsDir() {
+        return root.resolve("genetic-jenetics");
+    }
+
     Path minimizerDir(MinimizerAlgorithm algorithm) {
         switch (algorithm) {
             case NAIVE:
                 return naiveDir();
             case GENETIC:
                 return geneticDir();
+            case GENETIC_JENETICS:  
+                return geneticJeneticsDir();
             case GREEDY_ESSENTIAL:
             default:
                 return greedyEssentialDir();
@@ -63,3 +69,4 @@ final class PipelinePaths {
         return minimizerDir(algorithm).resolve("selected-test-ids.txt");
     }
 }
+

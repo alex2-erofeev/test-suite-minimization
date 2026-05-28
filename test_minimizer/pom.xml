@@ -79,6 +79,11 @@
             <artifactId>junit-platform-launcher</artifactId>
             <version>1.11.4</version>
         </dependency>
+        <dependency>
+            <groupId>io.jenetics</groupId>
+            <artifactId>jenetics</artifactId>
+            <version>7.2.0</version>
+        </dependency>
 
         <dependency>
             <groupId>org.junit.jupiter</groupId>

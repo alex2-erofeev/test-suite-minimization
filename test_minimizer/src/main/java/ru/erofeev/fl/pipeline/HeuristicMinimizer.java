@@ -2,6 +2,7 @@ package ru.erofeev.fl.pipeline;
 
 import ru.erofeev.fl.coverage.CoverageMatrix;
 import ru.erofeev.fl.algorithm.GeneticAlgorithm;
+import ru.erofeev.fl.algorithm.GeneticJeneticsAlgorithm;
 import ru.erofeev.fl.algorithm.GreedyEssentialAlgorithm;
 import ru.erofeev.fl.algorithm.NaiveAlgorithm;
 import ru.erofeev.fl.algorithm.TestSuiteMinimizationAlgorithm;
@@ -53,8 +54,11 @@ final class HeuristicMinimizer {
                 return new GreedyEssentialAlgorithm();
             case GENETIC:
                 return new GeneticAlgorithm();
+            case GENETIC_JENETICS: 
+                return new GeneticJeneticsAlgorithm();
             default:
                 throw new IllegalArgumentException("Unsupported heuristic algorithm: " + algorithm);
         }
     }
 }
+

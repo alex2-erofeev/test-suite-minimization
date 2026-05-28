@@ -254,19 +254,21 @@ public final class PitestMinimizedWrappersMain {
         if ("GA".equals(normalized)) {
             return "GENETIC";
         }
+        if ("GJ".equals(normalized)) {
+            return "GENETIC";
+        }
         if ("GR".equals(normalized) || "GREEDY".equals(normalized)) {
             return "GREEDY_ESSENTIAL";
         }
-        if ("PBE".equals(normalized)
-            || "LP".equals(normalized)
-            || "NAIVE".equals(normalized)
+        if ("NAIVE".equals(normalized)
             || "GREEDY_ESSENTIAL".equals(normalized)
+            || "GENETIC_JENETICS".equals(normalized)
             || "GENETIC".equals(normalized)) {
             return normalized;
         }
         throw new IllegalArgumentException(
             "Unsupported minimizer.algorithm: " + rawAlgorithm
-                + ". Expected PBE, LP, NAIVE, GREEDY_ESSENTIAL, GENETIC, GA or GR."
+                + ". Expected NAIVE, GREEDY_ESSENTIAL, GENETIC, GA, GJ, GENETIC_JENETICS or GR."
         );
     }
 
@@ -307,12 +309,6 @@ public final class PitestMinimizedWrappersMain {
     }
 
     private static String algorithmDir(String algorithm) {
-        if ("LP".equals(algorithm)) {
-            return "lp";
-        }
-        if ("PBE".equals(algorithm)) {
-            return "pbe";
-        }
         if ("NAIVE".equals(algorithm)) {
             return "naive";
         }
@@ -321,6 +317,9 @@ public final class PitestMinimizedWrappersMain {
         }
         if ("GENETIC".equals(algorithm)) {
             return "genetic";
+        }
+        if ("GENETIC_JENETICS".equals(algorithm)) {
+            return "genetic-jenetics";
         }
         throw new IllegalArgumentException("Unsupported minimizer.algorithm: " + algorithm);
     }
